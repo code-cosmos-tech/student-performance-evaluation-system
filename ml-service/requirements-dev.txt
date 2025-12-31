@@ -1,0 +1,6 @@
+pytest==9.0.2
+ipython
+jupyter
+notebook
+matplotlib
+seaborn
