@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: student-performance-evaluation-system
+  main:
+    allow-circular-references: true
+  mongodb:
+    uri: MONGO_URI
+  data:
+    mongodb:
+      auto-index-creation: true
+
+
+jwt:
+  secret: JWT_SECRET
