@@ -1,0 +1,89 @@
+# =========================
+# Environment & secrets
+# =========================
+.env
+.env.*
+*.pem
+*.key
+
+# =========================
+# Java - Backend
+# =========================
+HELP.md
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+
+# =========================
+# Frontend - React
+# =========================
+dist/
+.cache/
+
+
+# =========================
+# Python - ML API Service
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.sqlite3
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ipynb checkpoints and jupyter notebooks
+.ipynb_checkpoints/
+*.iypnb
+
+# Virtual environments
+venv/
+.env/
+.venv/
+
+# =========================
+# ML artifacts
+# =========================
+#models/*.joblib
+#models/*.pkl
+#models/*.bin
+
+# =========================
+# OS / Editor
+# =========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.idea
+*.iws
+*.iml
+*.ipr
+
+# =========================
+# Test artifacts
+# =========================
+test-reports/
