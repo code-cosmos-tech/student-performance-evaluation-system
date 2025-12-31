@@ -56,7 +56,7 @@ __pycache__/
 htmlcov/
 
 # ipynb checkpoints and jupyter notebooks
-.ipynb_checkpoints/
+ml-service/preprocessing/.ipynb_checkpoints/
 *.iypnb
 
 # Virtual environments
