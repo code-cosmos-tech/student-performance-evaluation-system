@@ -1,6 +1,6 @@
 package com.codeandcosmos.backend.controller;
 
-import com.codeandcosmos.backend.dto.request.PredicationDataRequest;
+import com.codeandcosmos.backend.dto.request.PredictionDataRequest;
 import com.codeandcosmos.backend.model.Prediction;
 import com.codeandcosmos.backend.model.PredictionData;
 import com.codeandcosmos.backend.model.Profile;
@@ -42,8 +42,8 @@ public class AdminController {
     }
 
     @PostMapping("/addData/{id}")
-    public ResponseEntity<Response> addStudentData(@PathVariable("id") String id, @RequestBody PredicationDataRequest predicationDataRequest) {
-        adminService.addData(id, predicationDataRequest);
+    public ResponseEntity<Response> addStudentData(@PathVariable("id") String id, @RequestBody PredictionDataRequest predictionDataRequest) {
+        adminService.addData(id, predictionDataRequest);
 
         Response response = Response.builder()
                 .message("added data successfully")

@@ -1,6 +1,6 @@
 package com.codeandcosmos.backend.service;
 
-import com.codeandcosmos.backend.dto.request.PredicationDataRequest;
+import com.codeandcosmos.backend.dto.request.PredictionDataRequest;
 import com.codeandcosmos.backend.dto.response.PredictionResponse;
 import com.codeandcosmos.backend.model.Prediction;
 import com.codeandcosmos.backend.model.PredictionData;
@@ -17,10 +17,10 @@ public class PredictionService {
     private final ProfileRepository profileRepository;
     private final PredictionRepository predictionRepository;
 
-    public PredictionResponse predict(String userId, PredicationDataRequest predicationDataRequest) {
+    public PredictionResponse predict(String userId, PredictionDataRequest predicationDataRequest) {
 
         PredictionResponse predictionResponse = restTemplate.postForEntity(
-                "https://student-performance-ml-service.onrender.com/api/1.0.0/ml/predict",
+                "https://student-performance-ml-service.onrender.com/api/v1/ml/predict",
                 predicationDataRequest,
                 PredictionResponse.class
         ).getBody();

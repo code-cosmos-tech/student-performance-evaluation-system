@@ -1,6 +1,6 @@
 package com.codeandcosmos.backend.service;
 
-import com.codeandcosmos.backend.dto.request.PredicationDataRequest;
+import com.codeandcosmos.backend.dto.request.PredictionDataRequest;
 import com.codeandcosmos.backend.model.Prediction;
 import com.codeandcosmos.backend.model.PredictionData;
 import com.codeandcosmos.backend.model.Profile;
@@ -36,7 +36,7 @@ public class AdminService {
         return predictionRepository.findAll();
     }
 
-    public void addData(String id, PredicationDataRequest predicationDataRequest) {
+    public void addData(String id, PredictionDataRequest predicationDataRequest) {
         User user = userRepository.findById(id).orElseThrow(()->new IllegalArgumentException("user not found"));
         Profile profile = profileRepository.findByUserId(id).orElseThrow(()->new IllegalArgumentException("profile not found"));
 
@@ -45,7 +45,7 @@ public class AdminService {
         predictionDataRepository.save(predictionData);
     }
 
-    private PredictionData preparePredictionData(String userId, String departmentName, PredicationDataRequest predicationDataRequest) {
+    private PredictionData preparePredictionData(String userId, String departmentName, PredictionDataRequest predicationDataRequest) {
         return PredictionData.builder()
                 .userId(userId)
                 .lastSemSPI(predicationDataRequest.getLastSemSPI())
@@ -69,13 +69,13 @@ public class AdminService {
         ExecutorService executorService = Executors.newFixedThreadPool(10);
 
         predictionDataList.forEach(data->{
-            PredicationDataRequest predicationDataRequest = convertToPredicationDataRequest(data);
+            PredictionDataRequest predicationDataRequest = convertToPredicationDataRequest(data);
             predictionService.predict(data.getUserId(), predicationDataRequest);
         });
     }
 
-    public PredicationDataRequest convertToPredicationDataRequest(PredictionData data) {
-        return PredicationDataRequest.builder()
+    public PredictionDataRequest convertToPredicationDataRequest(PredictionData data) {
+        return PredictionDataRequest.builder()
                 .lastSemSPI(data.getLastSemSPI())
                 .internalAssessmentAvg(data.getInternalAssessmentAvg())
                 .assignmentDelayCount(data.getAssignmentDelayCount())
