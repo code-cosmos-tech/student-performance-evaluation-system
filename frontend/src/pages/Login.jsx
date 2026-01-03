@@ -61,9 +61,9 @@ export default function Login() {
             <GraduationCap className="h-8 w-8 text-white" />
           </div>
           <h1 className="text-2xl font-bold text-white tracking-tight">
-            EvolSys
+            Student Performance Evaluation System
           </h1>
-          <p className="text-indigo-100 text-sm mt-1">Student Performance Evolution System</p>
+          <p className="text-indigo-100 text-sm mt-1">An AI-powered Academic Analysis</p>
         </div>
 
         {/* Form Section */}

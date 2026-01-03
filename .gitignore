@@ -2,7 +2,6 @@
 # Environment & secrets
 # =========================
 .env
-.env.*
 *.pem
 *.key
 
@@ -61,7 +60,7 @@ ml-service/preprocessing/.ipynb_checkpoints/
 
 # Virtual environments
 venv/
-.env/
+ml-service/.env.example/
 .venv/
 
 # =========================
