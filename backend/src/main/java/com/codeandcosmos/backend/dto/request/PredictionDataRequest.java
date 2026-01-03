@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class PredicationDataRequest {
+public class PredictionDataRequest {
       private float lastSemSPI;
       private float internalAssessmentAvg;
       private float attendancePercentage;
